@@ -23,18 +23,9 @@ function layout(content) {
   `;
 }
 
-function home(email) {
-  if (email) {
-    return layout(/*html */ `
-      <h1>Welcome back ${email}</h1>
-      <a href="/log-out">Log out</a>
-    `);
-  } else {
-    return layout(/*html */ `
-      <h1>Learn Express</h1>
-      <a href="/log-in">Log in</a>
-    `);
-  }
+function logOut(email) {
+  return layout(/*html */ `
+    <h1>Good Bye ${email}</h1> `);
 }
 
 function logIn() {
@@ -124,11 +115,18 @@ function details() {
   `);
 }
 
-function results() {
+function results(someData) {
   return layout(/*html */ `
   <h1>Here is the results</h1>
-  <h2>Depending on your details you are going to live to the age of: 45-50</h2>
+  <h2>Depending on your details you are going to live to the age of: ${someData}</h2>
   `);
 }
 
-module.exports = { home, logIn, details, results };
+function someThingWrong(content) {
+  return layout(/*html */ `
+  <h1>${content}</h1>
+  <h2>try to find out the reason :(</h2>
+  `);
+}
+
+module.exports = { logOut, logIn, details, results, someThingWrong };

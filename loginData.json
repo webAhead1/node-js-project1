@@ -1,1 +1,4 @@
-[{"author":"asma","age":"23","length":"170","weight":"52","sport":["on",""],"diseases":["on",""],"allergy":["on",""]},{"email":"hello@gmail.com","password":"asmaalafe"}]
+[
+  { "email": "hithere@gmail.com", "password": "swweeeee" },
+  { "email": "hello@gmail.com", "password": "asmaa111" }
+]
