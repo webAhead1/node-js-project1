@@ -53,7 +53,7 @@ server.post("/sign-up", (req, res) => {
 
   const jsonString = fs.readFileSync("loginData.json");
   const someData = JSON.parse(jsonString);
-  /*for (let key in someData[0]) {
+  /* for (let key in someData[0]) {
     if (
       email === someData[0].hasOwnProperty(key) &&
       password === someData[0].hasOwnProperty(key)
@@ -89,14 +89,18 @@ server.post("/details", (req, res) => {
 server.get("/results", (req, res) => {
   const jsonString = fs.readFileSync("data.json");
   const p = JSON.parse(jsonString);
-  console.log(1, JSON.parse(jsonString)[0]);
-  const x = 0;
-  /*for (var key in p) {
-    if (p.hasOwnProperty(key)) {
-      console.log(key + " -> " + p[key]);
+  console.log(p[0].length);
+  let x = "0";
+  console.log(p[0].author);
+  console.log(req.body);
+  for (let idx in p) {
+    if (p[idx].author === req.body.author) {
+      if (parseInt(p[idx].length) < 150 && parseInt(p[idx].weight) > 70) {
+        console.log(p[idx]);
+        x = "50 - 60";
+      }
     }
-  }*/
-  // here i should filter this data
+  }
   const html = templates.results(x);
   res.send(html);
 });

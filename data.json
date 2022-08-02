@@ -1,1 +1,11 @@
-[{"author":"asma","age":"23","length":"170","weight":"52","sport":["on",""],"diseases":["on",""],"allergy":["on",""]},{"author":"yaniv","age":"26","length":"178","weight":"78","sport":["on","I am doing yoga"],"diseases":["on",""],"allergy":["on",""]},{"author":"asma","age":"23","length":"170","weight":"52","sport":["on",""],"diseases":["on",""],"allergy":["on",""]}]
+[
+  {
+    "author": "asma",
+    "age": "23",
+    "length": "145",
+    "weight": "78",
+    "sport": ["on", ""],
+    "diseases": ["on", ""],
+    "allergy": ["on", ""]
+  }
+]

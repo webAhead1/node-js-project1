@@ -115,10 +115,10 @@ function details() {
   `);
 }
 
-function results(someData) {
+function results(x) {
   return layout(/*html */ `
   <h1>Here is the results</h1>
-  <h2>Depending on your details you are going to live to the age of: ${someData}</h2>
+  <h2>Depending on your details you are going to live to the age of: ${x}</h2>
   `);
 }
 
