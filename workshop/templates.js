@@ -86,39 +86,15 @@ function details() {
       </label>
       <input id="weight" type="text" name="weight" required>
 
-      <label for="sport">
-      sport<span aria-hidden="true">*</span>
-      </label>
-      <input id="sport" type="radio" name="sport">Yes</input>
-      <input id="sport" type="radio" name="sport">No</input>
-      <label for="sprot">if you've answered yes, what kind of spots to exercise</label>
-      <textarea id="sport" name="sport"></textarea>
-
-      <label for="diseases">
-      diseases<span aria-hidden="true">*</span>
-      </label>
-      <input id="diseases" type="radio" name="diseases">Yes</input>
-      <input id="diseases" type="radio" name="diseases">No</input>
-      <label for="diseases">if you've answered yes, what kind of diseases you have</label>
-      <textarea id="diseases" name="diseases"></textarea>
-
-      <label for="allergy">
-      allergy<span aria-hidden="true">*</span>
-      </label>
-      <input id="allergy" type="radio" name="allergy">Yes</input>
-      <input id="allergy" type="radio" name="allergy">No</input>
-      <label for="allergy">if you've answered yes, what kind of allergy you have</label>
-      <textarea id="allergy" name="allergy"></textarea>
-
       <button type="submit">Submit</button>
     </form>
   `);
 }
 
-function results(x) {
+function results() {
   return layout(/*html */ `
   <h1>Here is the results</h1>
-  <h2>Depending on your details you are going to live to the age of: ${x}</h2>
+  <h2>Depending on your details you are going to live to the age of: </h2>
   `);
 }
 
