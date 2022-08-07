@@ -104,7 +104,7 @@ function details() {
 function results(name, x) {
   return layout(/*html */ `
   <h1>Here is the results</h1>
-  <h2>Depending on your (${name}) details you are going to live to the age of: ${x}</h2>
+  <h2>(${name}) : ${x}</h2>
   `);
 }
 

@@ -121,7 +121,7 @@ server.post("/details", checkEmail, (req, res) => {
 
 server.get("/results", checkEmail, async (req, res) => {
   const email = req.cookies.email;
-  let x = 0;
+  let x = "";
   console.log(email);
 
   const result = await db.query(
@@ -135,14 +135,28 @@ server.get("/results", checkEmail, async (req, res) => {
   }
   const name = result.rows[0].name;
   // depending on the database data we should send the result here to the result method
-  if (
-    result.rows[0].age > 20 &&
-    result.rows[0].length < 180 &&
-    result.rows[0].weight < 70
-  ) {
-    x = 50;
+  const age = result.rows[0].age;
+  const length = result.rows[0].length / 100;
+  const weight = result.rows[0].weight;
+  const bmi = weight / Math.pow(length, 2);
+  if (age >= 18) {
+    if (bmi < 16) x = "Severe Thinness";
+    else if (bmi >= 16 && bmi < 17) x = "Moderate Thinness";
+    else if (bmi >= 17 && bmi < 18.5) x = "Mild Thinness";
+    else if (bmi >= 18.5 && bmi < 25) x = "Normal";
+    else if (bmi >= 25 && bmi < 30) x = "Overweight";
+    else if (bmi >= 30 && bmi < 35) x = "Obese Class I";
+    else if (bmi >= 35 && bmi < 40) x = "Obese Class II";
+    else if (bmi >= 40) x = "Obese Class III";
+  } else if (age >= 2 && age < 18) {
+    if ((bmi / 100) * bmi < 5) x = "Underweight";
+    else if ((bmi / 100) * bmi >= 5 && (bmi / 100) * bmi < 85)
+      x = "Healthy weight";
+    else if ((bmi / 100) * bmi >= 85 && (bmi / 100) * bmi < 95)
+      x = "At risk of overweight";
+    else if ((bmi / 100) * bmi >= 95) x = "Overweight";
   } else {
-    x = 100;
+    x = "cannot calculate for babies :))))))";
   }
 
   const html = templates.results(name, x);
