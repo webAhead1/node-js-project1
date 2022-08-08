@@ -26,7 +26,7 @@ function layout(content) {
 
 function logOut(email) {
   return layout(/*html */ `
-    <h1>Good Bye ${email}</h1> 
+    <h1>Good Bye ${email}}</h1> 
     <p>You will be redirected in 3 seconds</p>
     <script>
         var timer = setTimeout(function() {
@@ -36,11 +36,10 @@ function logOut(email) {
 }
 function home() {
   return layout(/*html */ `
-    <h1>hello</h1> `);
+    <h1>Welcome to our HealthWeb, our web will calculate Your Body Mass Index and we will give you informations and some tips depending on the results ;)</h1> `);
 }
 function logIn() {
   return layout(/*html */ `
-    <h1>Hello<h1>
     <h2>Please Log in to your account first</h2>
     <form action="/log-in" method="POST">
     <label for="email">
@@ -101,10 +100,10 @@ function details() {
   `);
 }
 
-function results(name, x) {
+function results(name, bmi, x) {
   return layout(/*html */ `
-  <h1>Here is the results</h1>
-  <h2>(${name}) : ${x}</h2>
+  <h1>Hey ${name}</h1>
+  <h2>Your Body Mass Index is ${bmi} This is considered: ${x}</h2>
   `);
 }
 

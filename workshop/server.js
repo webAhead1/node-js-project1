@@ -141,14 +141,14 @@ server.get("/results", checkEmail, async (req, res) => {
   const weight = result.rows[rows.length - 1].weight;
   const bmi = weight / Math.pow(length, 2);
   if (age >= 18) {
-    if (bmi < 16) x = "Severe Thinness";
-    else if (bmi >= 16 && bmi < 17) x = "Moderate Thinness";
-    else if (bmi >= 17 && bmi < 18.5) x = "Mild Thinness";
-    else if (bmi >= 18.5 && bmi < 25) x = "Normal";
-    else if (bmi >= 25 && bmi < 30) x = "Overweight";
-    else if (bmi >= 30 && bmi < 35) x = "Obese Class I";
-    else if (bmi >= 35 && bmi < 40) x = "Obese Class II";
-    else if (bmi >= 40) x = "Obese Class III";
+    if (bmi < 16.0) x = "Severe Thinness";
+    else if (bmi >= 16.0 && bmi < 17.0) x = "Moderate Thinness";
+    else if (bmi >= 17.0 && bmi < 18.5) x = "Mild Thinness";
+    else if (bmi >= 18.5 && bmi < 25.0) x = "Normal";
+    else if (bmi >= 25.0 && bmi < 30.0) x = "Overweight";
+    else if (bmi >= 30.0 && bmi < 35.0) x = "Obese Class I";
+    else if (bmi >= 35.0 && bmi < 40.0) x = "Obese Class II";
+    else if (bmi >= 40.0) x = "Obese Class III";
   } else if (age >= 2 && age < 18) {
     if ((bmi / 100) * bmi < 5) x = "Underweight";
     else if ((bmi / 100) * bmi >= 5 && (bmi / 100) * bmi < 85)
@@ -160,7 +160,7 @@ server.get("/results", checkEmail, async (req, res) => {
     x = "cannot calculate for babies :))))))";
   }
 
-  const html = templates.results(name, x);
+  const html = templates.results(name,bmi, x);
   res.send(html);
 });
 
