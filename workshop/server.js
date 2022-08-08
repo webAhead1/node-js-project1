@@ -55,7 +55,7 @@ server.post("/sign-up", async (req, res) => {
     return;
   }
 
-  if (email === result.rows[result.rows.length - 1].email) {
+  if (email === result.rows[0].email) {
     // if yes then go to templates.someThingWrong();
     const html = templates.someThingWrong("email is found");
     res.send(html);
@@ -80,8 +80,8 @@ server.post("/log-in", async (req, res) => {
     res.send(html);
     return;
   }
-  if (email === result.rows[result.rows.length - 1].email) {
-    if (password != result.rows[result.rows.length - 1].password) {
+  if (email === result.rows[0].email) {
+    if (password != result.rows[0].password) {
       // if yes but the password is wrong
       const html = templates.someThingWrong("password is wrong");
       res.send(html);
