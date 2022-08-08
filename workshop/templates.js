@@ -11,9 +11,10 @@ function layout(content) {
       <body>
         <header>
           <nav>
+            <a href="/">home</a>
             <a href="/log-in">Log in</a>
             <a href="/history">history</a>
-            <a href="/details">Write your details</a>
+            <a href="/details">Write details</a>
             <a href="/results">Results</a>
             <a href="/log-out">Log out</a>
           </nav>
@@ -36,7 +37,8 @@ function logOut(email) {
 }
 function home() {
   return layout(/*html */ `
-    <h1>Welcome to our HealthWeb, our web will calculate Your Body Mass Index and we will give you informations and some tips depending on the results ;)</h1> `);
+    <h1>Welcome to our HealthWeb<\h1>
+    <h2>our web will calculate Your Body Mass Index and we will give you informations and some tips depending on the results ;)</h2> `);
 }
 function logIn() {
   return layout(/*html */ `
