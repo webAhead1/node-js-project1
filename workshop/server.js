@@ -55,7 +55,7 @@ server.post("/sign-up", async (req, res) => {
     return;
   }
 
-  if (email === result.rows[0].email) {
+  if (email === result.rows[result.rows.length - 1].email) {
     // if yes then go to templates.someThingWrong();
     const html = templates.someThingWrong("email is found");
     res.send(html);
@@ -80,8 +80,8 @@ server.post("/log-in", async (req, res) => {
     res.send(html);
     return;
   }
-  if (email === result.rows[0].email) {
-    if (password != result.rows[0].password) {
+  if (email === result.rows[result.rows.length - 1].email) {
+    if (password != result.rows[result.rows.length - 1].password) {
       // if yes but the password is wrong
       const html = templates.someThingWrong("password is wrong");
       res.send(html);
@@ -128,16 +128,17 @@ server.get("/results", checkEmail, async (req, res) => {
     "Select name,age,length,weight From users u, details d Where u.email=d.email AND d.email= $1",
     [email]
   );
+
   console.log(1, result.rows);
   if (result.rows.length == 0) {
     res.redirect("./details");
     return;
   }
-  const name = result.rows[0].name;
+  const name = result.rows[rows.length - 1].name;
   // depending on the database data we should send the result here to the result method
-  const age = result.rows[0].age;
-  const length = result.rows[0].length / 100;
-  const weight = result.rows[0].weight;
+  const age = result.rows[rows.length - 1].age;
+  const length = result.rows[rows.length - 1].length / 100;
+  const weight = result.rows[rows.length - 1].weight;
   const bmi = weight / Math.pow(length, 2);
   if (age >= 18) {
     if (bmi < 16) x = "Severe Thinness";
@@ -175,10 +176,10 @@ server.get("/history", checkEmail, async (req, res) => {
     const html = templates.someThingWrong("There is no details yet!");
     res.send(html);
   } else {
-    const name = result.rows[0].name;
-    const age = result.rows[0].age;
-    const length = result.rows[0].length;
-    const weight = result.rows[0].weight;
+    const name = result.rows[result.rows.length - 1].name;
+    const age = result.rows[result.rows.length - 1].age;
+    const length = result.rows[result.rows.length - 1].length;
+    const weight = result.rows[result.rows.length - 1].weight;
     const html = templates.history(name, age, length, weight);
     res.send(html);
   }
