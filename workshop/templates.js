@@ -11,12 +11,12 @@ function layout(content) {
       <body>
         <header>
           <nav>
-            <a href="/">home</a>
-            <a href="/log-in">Log in</a>
-            <a href="/history">history</a>
-            <a href="/details">Write details</a>
-            <a href="/results">Results</a>
-            <a href="/log-out">Log out</a>
+            <a href="/"> <i class="fa fa-fw fa-home"></i> home</a>
+            <a href="/log-in"> <i class="fa fa-fw fa-user"></i>Log in</a>
+            <a href="/history"> <i class="fa fa-history"</i>history</a>
+            <a href="/details"> <i class="fa fa-pencil fa-fw"</i>Write details</a>
+            <a href="/results"><i class="fa fa-bar-chart" </i>Results</a>
+            <a href="/log-out"><i class="fa fa-sign-out"</i>Log out</a>
           </nav>
         </header>
         ${content}
