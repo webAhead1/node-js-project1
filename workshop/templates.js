@@ -33,26 +33,29 @@ function layout(content) {
 
 function logOut(email) {
   return layout(/*html */ `
-    <h1 class="bye">Good Bye ${email}}</h1> 
-    <p>You will be redirected in 3 seconds</p>
+  <div class="logOut">
+    <h1 class="bye">GoodBye ${email}</h1> 
+    <p>You will be redirected to the homepage in 5 seconds</p>
     <script>
         var timer = setTimeout(function() {
             window.location='http://localhost:3000/'
-        }, 3000);
-    </script>`);
+        }, 5000);
+    </script>
+    </div>
+    `);
 }
 function home() {
   return layout(/*html */ `
     <div class="homepage">
     <h1>Welcome to our <span>HealthWeb</span></h1>
-    <h2>our web will calculate Your Body Mass Index </h2>
-    <h2>and we will give you informations and some tips depending on the results ;)</h2> `);
+    <h2>Our web will calculate Your body mass index<span> (BMI)</span></h2>
+    <h2>We provide information and some tips depending on the results</h2> `);
     
 }
 function logIn() {
   return layout(/*html */ `
   <div class="signin">
-    <h2>Please Log in to your account first</h2>
+    <h2>Login</h2>
     <form action="/log-in" method="POST">
     <form id="emailin">
     <p>  
@@ -67,7 +70,7 @@ function logIn() {
     </form>
     </form>
     <div id="create-account-wrap">
-    <p><a href="http://localhost:3000/sign-up"> If you don't have an account yet</a></p>
+    <p><a href="http://localhost:3000/sign-up"> If you don't have an account yet, click here to register</a></p>
     </div><!--create-account-wrap-->
     </div><!--login-form-wrap-->
   `);
@@ -75,7 +78,7 @@ function logIn() {
 function signUp() {
   return layout(/*html */ `
   <div class="signuptitle">
-  <h2>Please Sign Up here</h2>
+  <h2>Registration</h2>
   <form action="/sign-up" method="POST">
   <form id="whatever">
   <p>
@@ -94,52 +97,59 @@ function signUp() {
 }
 function details() {
   return layout(/*html */ `
+  <div class="writeDetails">
     <h1>Add your details</h1>
     <form action="/details" method="POST">
       <label for="name">
-        Your name<span aria-hidden="true">*</span>
+        Your Name<span aria-hidden="true">*</span>
       </label>
       <input id="name" type="text" name="name" required>
 
       <label for="age">
-        your age<span aria-hidden="true">*</span>
+        Your Age<span aria-hidden="true">*</span>
       </label>
       <input id="age" type="number" name="age" required>
 
       <label for="length">
-        length<span aria-hidden="true">*</span>
+        Height<span aria-hidden="true">*</span>
       </label>
       <input id="length" type="text" name="length" required>
 
       <label for="weight">
-        weight<span aria-hidden="true">*</span>
+        Weight<span aria-hidden="true">*</span>
       </label>
       <input id="weight" type="text" name="weight" required>
 
-      <button type="submit">Submit</button>
+      <input type="submit" id="submit" value"Submit">
     </form>
+    </div>
   `);
 }
 
 function results(name, bmi, x) {
   return layout(/*html */ `
+  <div class="results">
   <h1>Hey ${name}</h1>
-  <h2>Your Body Mass Index is ${bmi} This is considered: ${x}</h2>
-  <img src=" alt="Icons">
+  <h2>Your Body Mass Index is <span>${bmi}</span> This is considered as ${x}</h2>
+  </div>
   `);
+  
 }
 
 function history(name, age, length, weight) {
   return layout(/*html */ `
+  <div class="history">
   <h1>Here is your history</h1>
   <h2>name: ${name}</br>age: ${age}</br>length: ${length}</br>weight:${weight}</br></h2>
+  </div>
   `);
 }
 
 function someThingWrong(content) {
   return layout(/*html */ `
+  <div class="someThingwrong">
   <h1>${content}</h1>
-  <h2>Try To Find Out The Reason :(</h2>
+  </div>
   `);
 }
 

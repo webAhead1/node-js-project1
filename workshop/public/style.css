@@ -51,6 +51,7 @@ nav ul a:hover{
 }
 
 .homepage{
+  left: 10px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -64,6 +65,11 @@ h1{
   color: black;
   margin: 20px;
   font-size: 30px;
+}
+.bmiColor{
+  font-size: 35px;
+  font-weight: bold;
+  color: #8a8b8e;
 }
 .signin{
   background-color: #fff;
@@ -126,15 +132,6 @@ input[type="email"]:valid ~ .validation span:first-child {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-input[type="password"]:valid ~ .validation span:last-child,
-input[type="email"]:valid ~ .validation span:last-child {
-  top: 35px;
-  left: 8px;
-  width: 11px;
-  height: 3px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
 
 .validation {
   display: none;
@@ -146,7 +143,7 @@ input[type="email"]:valid ~ .validation span:last-child {
   top: 0px;
 }
 
-input[type="submit"] {
+input[type="submit"]{
   border: none;
   display: block;
   background-color:black;
@@ -193,15 +190,6 @@ h2{
 .whatever{
   padding: 0 60px;
 }
-input[type="password"]:valid ~ .crying span:first-child,
-input[type="email"]:valid ~ .crying span:first-child {
-  top: 30px;
-  left: 14px;
-  width: 20px;
-  height: 3px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
 input[type="password"]:valid ~ .crying span:last-child,
 input[type="email"]:valid ~ .crying span:last-child {
   top: 35px;
@@ -221,24 +209,30 @@ input[type="email"]:valid ~ .crying span:last-child {
   right: 15px;
   top: 0px;
 }
-input[type="submit"] {
-  border: none;
-  display: block;
-  background-color:black;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  font-size: 18px;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;
+.writeDetails, .results, .logOut, .someThingwrong{
+  margin: 100px auto;
+  width: 700px;
 }
- input[type="submit"]:hover {
-  background-color:#F05A1A;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+.history{
+  margin: 120px 100px;
+  width: 700px;
+}
+
+.writeDetails input {
+  margin-bottom: 30px;
+  font-size: 25px;
+  display: block; 
+  box-sizing: border-box;
+  width: 95%;
+  outline: none;
+  height: 55px;
+  line-height: 60px;
+  border-radius: 4px;
+  padding-left: 10px;
+}
+.writeDetails label{
+  font-size: 25px;
+}
+.homepage h2 span{
+  color:cadetblue;
 }
