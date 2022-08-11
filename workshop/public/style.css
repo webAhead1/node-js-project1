@@ -1,62 +1,239 @@
 * {
+  padding: 0;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
   box-sizing: border-box;
 }
-
-body {
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-  background-color: #000;
-  color: #fff;
-  font-family: Consolas, monaco, monospace;
-}
-
-label,
-input,
-textarea,
-button {
-  display: block;
-  font: inherit;
-}
-
-label,
-button {
-  margin-top: 1rem;
-  font-weight: bold;
-}
-
-input,
-textarea {
+.hero {
+  height: 100vh;
   width: 100%;
-  margin-top: 0.5rem;
-  border: 0;
-  padding: 0.5rem;
+  background-image: url(healthbackground.jpeg);
+  background-size: cover;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 45px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+.logo {
+  color: black;
+  font-size: 35px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+span {
+  color: #f05a1a;
 }
 
-input:focus,
-textarea:focus {
-  outline: 2px solid yellow;
+nav ul {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 25px;
 }
 
-textarea {
-  resize: vertical;
+nav ul a:hover {
+  color: #f05a1a;
+  transition: 0.4s;
+}
+.btn {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 30px;
 }
 
-button {
-  border: 0;
-  padding: 0.75rem 1rem;
-  background-color: yellow;
+.homepage {
+  left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+h1 {
+  color: black;
+  margin: 20px 0px 20px;
+  font-size: 75px;
+}
+.homepage h2 {
+  color: black;
+  margin: 20px;
+  font-size: 30px;
+}
+.bmiColor {
+  font-size: 35px;
+  font-weight: bold;
+  color: #8a8b8e;
+}
+.signin {
+  background-color: #fff;
+  width: 35%;
+  margin: 30px auto;
+  text-align: center;
+  padding: 20px 0 0 0;
+  border-radius: 4px;
+  box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
+}
+h2 {
+  color: black;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+.emailin {
+  padding: 0 60px;
+}
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 4px;
 }
 
-a {
-  color: yellow;
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 0 0 0 10px;
+  margin: 0;
+  color: #8a8b8e;
+  border: 1px solid #c2c0ca;
+  font-style: normal;
+  font-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  display: inline-block;
+  background: none;
+}
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border-color: #3ca9e2;
+}
+input[type="password"]:focus:invalid,
+input[type="email"]:focus:invalid {
+  color: #cc1e2b;
+  border-color: #cc1e2b;
+}
+input[type="password"]:valid ~ .validation span:first-child,
+input[type="email"]:valid ~ .validation span:first-child {
+  top: 30px;
+  left: 14px;
+  width: 20px;
+  height: 3px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
-nav > a + a {
-  margin-left: 1rem;
+.validation {
+  display: none;
+  position: absolute;
+  content: " ";
+  height: 60px;
+  width: 30px;
+  right: 15px;
+  top: 0px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+input[type="submit"] {
+  border: none;
+  display: block;
+  background-color: black;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+input[type="submit"]:hover {
+  background-color: #f05a1a;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#create-account-wrap {
+  background-color: #eeedf1;
+  color: #8a8b8e;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 0 0 4px 4px;
+}
+.signuptitle {
+  background-color: #fff;
+  width: 35%;
+  margin: 30px auto;
+  text-align: center;
+  padding: 20px 0 0 0;
+  border-radius: 4px;
+  box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
+}
+h2 {
+  color: black;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+.whatever {
+  padding: 0 60px;
+}
+input[type="password"]:valid ~ .crying span:last-child,
+input[type="email"]:valid ~ .crying span:last-child {
+  top: 35px;
+  left: 8px;
+  width: 11px;
+  height: 3px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.crying {
+  display: none;
+  position: absolute;
+  content: " ";
+  height: 60px;
+  width: 30px;
+  right: 15px;
+  top: 0px;
+}
+.writeDetails,
+.results,
+.logOut,
+.someThingwrong {
+  margin: 100px auto;
+  width: 700px;
+}
+.history {
+  margin: 120px 100px;
+  width: 700px;
+}
+
+.writeDetails input {
+  margin-bottom: 30px;
+  font-size: 25px;
+  display: block;
+  box-sizing: border-box;
+  width: 95%;
+  outline: none;
+  height: 55px;
+  line-height: 60px;
+  border-radius: 4px;
+  padding-left: 10px;
+}
+.writeDetails label {
+  font-size: 25px;
+}
+.homepage h2 span {
+  color: cadetblue;
 }
