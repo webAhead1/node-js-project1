@@ -5,7 +5,7 @@ function layout(content) {
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>health app</title>
+        <title>Health app</title>
         <link rel="stylesheet" href="/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,22 +100,22 @@ function details() {
     <h1>Add your details</h1>
     <form action="/details" method="POST">
       <label for="name">
-        Your Name<span aria-hidden="true">*</span>
+        Name<span aria-hidden="true">*</span>
       </label>
       <input id="name" type="text" name="name" required>
 
       <label for="age">
-        Your Age<span aria-hidden="true">*</span>
+        Age<span aria-hidden="true">*</span>
       </label>
-      <input id="age" type="number" name="age" required>
+      <input id="age" type="number" min="18" name="age" required>
 
       <label for="length">
-        Height<span aria-hidden="true">*</span>
+        Height (m)<span aria-hidden="true">*</span>
       </label>
       <input id="length" type="text" name="length" required>
 
       <label for="weight">
-        Weight<span aria-hidden="true">*</span>
+        Weight (kg)<span aria-hidden="true">*</span>
       </label>
       <input id="weight" type="text" name="weight" required>
 
@@ -134,11 +134,11 @@ function results(name, bmi, x) {
   `);
 }
 
-function history(name, age, length, weight) {
+function history(name, age, height, weight) {
   return layout(/*html */ `
   <div class="history">
-  <h1>Here is your history</h1>
-  <h2>Name : ${name}</br>Age : ${age}</br>Length : ${length}</br>Weight : ${weight}</br></h2>
+  <h1>Current Details</h1>
+  <h2>Name : ${name}</br>Age : ${age}</br>Height (m) : ${height}</br>Weight (kg) : ${weight}</br></h2>
   </div>
   `);
 }
