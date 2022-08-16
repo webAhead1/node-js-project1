@@ -41,6 +41,7 @@ nav ul a:hover{
   transition: .4s;
 }
 .btn{
+  cursor: pointer;
   background-color: black;
   color: white;
   text-decoration: none;
@@ -89,6 +90,7 @@ h2{
   padding: 0 60px;
 }
 input {
+  cursor: text;
   display: block;
   box-sizing: border-box;
   width: 100%;
