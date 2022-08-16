@@ -48,7 +48,7 @@ function home() {
   return layout(/*html */ `
     <div class="homepage">
     <h1>Welcome to our <span>HealthWeb</span></h1>
-    <h2>Our web will calculate Your body mass index<span> (BMI)</span></h2>
+    <h2>Our website will calculate your body mass index<span> (BMI)</span></h2>
     <h2>We provide information and some tips depending on the results</h2> `);
 }
 function logIn() {
@@ -138,7 +138,7 @@ function history(name, age, height, weight) {
   return layout(/*html */ `
   <div class="history">
   <h1>Current Details</h1>
-  <h2>Name : ${name}</br>Age : ${age}</br>Height (m) : ${height}</br>Weight (kg) : ${weight}</br></h2>
+  <h2>Name : ${name}</br>Age : ${age}</br>Height (cm) : ${height}</br>Weight (kg) : ${weight}</br></h2>
   </div>
   `);
 }
