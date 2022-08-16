@@ -1,17 +1,16 @@
-*{
+* {
   padding: 0;
   margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   box-sizing: border-box;
 }
-.hero{
+.hero {
   height: 100vh;
   width: 100%;
   background-image: url(healthbackground.jpeg);
-  background-size:cover;
-
+  background-size: cover;
 }
-nav{
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,28 +18,25 @@ nav{
   padding-left: 8%;
   padding-right: 8%;
 }
-.logo{
+.logo {
   color: black;
   font-size: 35px;
   letter-spacing: 1px;
   cursor: pointer;
 }
-span{
-  color: #F05A1A
+span {
+  color: #f05a1a;
 }
-
 nav ul {
   list-style-type: none;
   display: inline-block;
   padding: 10px 25px;
-
 }
-
-nav ul a:hover{
-  color:#F05A1A;
-  transition: .4s;
+nav ul a:hover {
+  color: #f05a1a;
+  transition: 0.4s;
 }
-.btn{
+.btn {
   cursor: pointer;
   background-color: black;
   color: white;
@@ -50,29 +46,28 @@ nav ul a:hover{
   padding: 10px 25px;
   border-radius: 30px;
 }
-
-.homepage{
+.homepage {
   left: 10px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-h1{
+h1 {
   color: black;
   margin: 20px 0px 20px;
   font-size: 75px;
 }
-.homepage h2{
+.homepage h2 {
   color: black;
   margin: 20px;
   font-size: 30px;
 }
-.bmiColor{
+.bmiColor {
   font-size: 35px;
   font-weight: bold;
   color: #8a8b8e;
 }
-.signin{
+.signin {
   background-color: #fff;
   width: 35%;
   margin: 30px auto;
@@ -81,12 +76,12 @@ h1{
   border-radius: 4px;
   box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
 }
-h2{
+h2 {
   color: black;
   font-size: 35px;
   margin-bottom: 50px;
 }
-.emailin{
+.emailin {
   padding: 0 60px;
 }
 input {
@@ -99,7 +94,6 @@ input {
   line-height: 60px;
   border-radius: 4px;
 }
-
 input[type="password"],
 input[type="email"] {
   width: 100%;
@@ -110,8 +104,8 @@ input[type="email"] {
   font-style: normal;
   font-size: 16px;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   position: relative;
   display: inline-block;
   background: none;
@@ -132,9 +126,8 @@ input[type="email"]:valid ~ .validation span:first-child {
   width: 20px;
   height: 3px;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
-
 .validation {
   display: none;
   position: absolute;
@@ -144,11 +137,10 @@ input[type="email"]:valid ~ .validation span:first-child {
   right: 15px;
   top: 0px;
 }
-
-input[type="submit"]{
+input[type="submit"] {
   border: none;
   display: block;
-  background-color:black;
+  background-color: black;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
@@ -162,11 +154,10 @@ input[type="submit"]{
   text-align: center;
 }
 input[type="submit"]:hover {
-  background-color:#F05A1A;
+  background-color: #f05a1a;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-
 #create-account-wrap {
   background-color: #eeedf1;
   color: #8a8b8e;
@@ -175,7 +166,7 @@ input[type="submit"]:hover {
   padding: 10px 0;
   border-radius: 0 0 4px 4px;
 }
-.signuptitle{
+.signuptitle {
   background-color: #fff;
   width: 35%;
   margin: 30px auto;
@@ -184,12 +175,12 @@ input[type="submit"]:hover {
   border-radius: 4px;
   box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
 }
-h2{
+h2 {
   color: black;
   font-size: 35px;
   margin-bottom: 50px;
 }
-.whatever{
+.whatever {
   padding: 0 60px;
 }
 input[type="password"]:valid ~ .crying span:last-child,
@@ -199,9 +190,8 @@ input[type="email"]:valid ~ .crying span:last-child {
   width: 11px;
   height: 3px;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
 .crying {
   display: none;
   position: absolute;
@@ -211,19 +201,21 @@ input[type="email"]:valid ~ .crying span:last-child {
   right: 15px;
   top: 0px;
 }
-.writeDetails, .results, .logOut, .someThingwrong{
+.writeDetails,
+.results,
+.logOut,
+.someThingwrong {
   margin: 100px auto;
   width: 700px;
 }
-.history{
+.history {
   margin: 120px 100px;
   width: 700px;
 }
-
 .writeDetails input {
   margin-bottom: 30px;
   font-size: 25px;
-  display: block; 
+  display: block;
   box-sizing: border-box;
   width: 95%;
   outline: none;
@@ -232,9 +224,9 @@ input[type="email"]:valid ~ .crying span:last-child {
   border-radius: 4px;
   padding-left: 10px;
 }
-.writeDetails label{
+.writeDetails label {
   font-size: 25px;
 }
-.homepage h2 span{
-  color:cadetblue;
+.homepage h2 span {
+  color: cadetblue;
 }
