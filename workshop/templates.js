@@ -110,7 +110,7 @@ function details() {
       <input id="age" type="number" min="18" name="age" required>
 
       <label for="length">
-        Height (m)<span aria-hidden="true">*</span>
+        Height (cm)<span aria-hidden="true">*</span>
       </label>
       <input id="length" type="text" name="length" required>
 
